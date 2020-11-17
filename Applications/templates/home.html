@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHIVAYOGI</title>
+</head>
+<body>
+
+{% block content %}
+
+<H1> HELLO {{name}}!!!!!</H1>
+
+<form action = "add" method="post">
+    {% csrf_token %}
+
+    Enter 1st Number : <input type="text" name="num1"><br>
+    Enter 2nd Number : <input type="text" name="num2"><br>
+    <input type="submit">
+
+</form>
+
+
+
+
+{% endblock %}
+</body>
+</html>
